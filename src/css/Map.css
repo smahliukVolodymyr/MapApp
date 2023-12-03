@@ -1,0 +1,16 @@
+#map-container,
+#map {
+  padding: 10px;
+  margin: 0 auto;
+  width: 90vw;
+  height: 60vh;
+}
+#marker-popup {
+  text-align: center;
+}
+#menu {
+  display: inline-block;
+  background-color: rgb(72, 72, 72);
+  width: 30vh;
+  color: aliceblue;
+}

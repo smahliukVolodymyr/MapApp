@@ -1,0 +1,31 @@
+/* styles.css */
+
+/* Reset default list styles and padding */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style each list item */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+/* Style the button */
+button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+#delete-all-button {
+  margin-left: 0;
+}
