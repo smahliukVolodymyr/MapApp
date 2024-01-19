@@ -1,9 +1,11 @@
-#map-container,
-#map {
+#map-container {
   padding: 10px;
   margin: 0 auto;
-  width: 90vw;
+  width: 95%;
   height: 60vh;
+}
+#map {
+  width: 100%;
 }
 #marker-popup {
   text-align: center;

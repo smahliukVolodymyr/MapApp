@@ -56,6 +56,7 @@ function MapComponent() {
       }
     });
   };
+
   const handleMarkerDelete = async (markerId) => {
     const markerDoc = doc(db, "marker", markerId);
     await deleteDoc(markerDoc);

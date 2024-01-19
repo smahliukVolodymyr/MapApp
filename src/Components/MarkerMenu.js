@@ -7,8 +7,18 @@ function MarkerMenu({ markers, onMarkerDelete, onDeleteAllMarkers }) {
       <button id="delete-all-button" onClick={onDeleteAllMarkers}>
         Delete All Markers
       </button>
-      <ul>
-        {markers.map((marker, index) => (
+      {markers.map((marker, index) => {
+        const formattedDate = new Date(marker.timeStamp).toLocaleDateString(
+          "en-US",
+          {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+          }
+        );
+        return (
           <li key={marker.id}>
             <h4>Marker: {index + 1}</h4>
             <p>
@@ -16,19 +26,12 @@ function MarkerMenu({ markers, onMarkerDelete, onDeleteAllMarkers }) {
               <br />
               Longitude: {marker.location[1]}
               <br />
-              TimeStamp:{" "}
-              {new Date(marker.timeStamp).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-                hour: "numeric",
-                minute: "numeric",
-              })}
+              TimeStamp: {formattedDate}
             </p>
             <button onClick={() => onMarkerDelete(marker.id)}>Delete</button>
           </li>
-        ))}
-      </ul>
+        );
+      })}
     </div>
   );
 }
